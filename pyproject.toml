@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-text-detector"
+version = "1.0.0"
+description = "Tiny terminal AI-text detector: one Python file, stdlib only, scores writing 0-100 on surface statistics"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "James Verlander"}]
+keywords = ["ai-text-detection", "stylometry", "writing-analysis", "detector", "cli", "text-analysis"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://pastagi.com/"
+"Source Code" = "https://github.com/scrapertweeter3-prog/ai-text-detector"
+"Bug Tracker" = "https://github.com/scrapertweeter3-prog/ai-text-detector/issues"
+
+[project.scripts]
+detectext = "detectext:main"
+
+[tool.setuptools]
+py-modules = ["detectext"]
