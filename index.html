@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The flag list is only as good as the false positive rate</title>
+<style>
+body{font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif;max-width:42rem;margin:2rem auto;padding:0 1rem;color:#14161a;background:#fbfcfc}
+h1{font-size:1.4rem;margin-bottom:.3rem}
+p{margin:.5rem 0}
+a{color:#0a58ca}
+footer{margin-top:2.6rem;color:#555;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>The flag list is only as good as the false positive rate</h1>
+<p>Detector demos lead with accuracy, and the flag list gets shown after. The order hides the number that decides whether the list is usable. Innocent writing vastly outnumbers machine text in most review queues, so a small false positive rate still sweeps up a large count of real authors. Precision at the deployment mix is the number to ask about, and it is the whole subject at <a href="https://pastagi.com/">PastAGI</a>: evals that price the failure mode instead of quoting accuracy.</p>
+
+<p>Run the example. A review queue holds 1,000 documents and a tenth are machine written. The detector catches 99 percent of those and flags 5 percent of the human work. That is 99 correct flags against 45 innocent documents, 144 flags total, and about one in three of them points at writing no model produced. Getting precision to 90 percent at the same mix means cutting the false positive rate under about 1.2 percent, a fourfold cut the same model has to deliver while catching the same share.</p>
+
+<p>The habit worth building is asking for the confusion matrix at your own mix before trusting any flag list. Drop the machine-written share to 2 percent and the same detector flags about 69 documents with 49 of them innocent, so most of the list is false. What a wrong flag costs belongs in the threshold decision too: a pulled human document means a rewrite or an appeal, and that price sits next to the vendor demo. A detector that cannot state its false positive rate at your prevalence has already told you something.</p>
+
+<footer>James Verlander, PastAGI</footer>
+</body>
+</html>
